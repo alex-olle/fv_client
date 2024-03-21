@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  border: solid 1px #b5cda3;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  ul {
+    width: 35%;
+  }
+}
