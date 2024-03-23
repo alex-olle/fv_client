@@ -31,7 +31,7 @@
   <h3 align="center">Fruites i Verdures de temporada a Catalunya</h3>
 
   <p align="center">
-    The frontend interface for Catalonia's Seasonal Fruits and Vegetables provides real-time updates on produce availability, promoting healthy eating and supporting local farmers.
+    The frontend interface for Fruites i Verdures de temporada de Catalunya provides real-time updates on produce availability, promoting healthy eating and supporting local farmers.
     <br />
     <a href="#"><strong>Explore the docs »</strong></a>
     <br />
