@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import "./style.css";
 
 import { Header } from "../components/Header/Header";
 import { Loading } from "../components/Loading/Loading";
-// import { getMonthData } from "../helpers/apiCalls";
 import { Toggle } from "../components/Toggle/Toggle";
 import { List } from "../components/List/List";
 import { ChangeMonthForm } from "../components/changeMonthForm/ChangeMonthForm";
@@ -15,19 +14,22 @@ export const Home = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1);
   const [shownArr, setShownArr] = useState(null);
 
-  fetch(process.env.REACT_APP_API_URL + "month/" + currentMonth)
-    .then((data) => {
-      return data.json();
-    })
-    .then((res) => {
-      setMonth(res);
-    })
-    .then(() => {
+  const fetchData = async (month) => {
+    try {
+      const response = await fetch(
+        process.env.REACT_APP_API_URL + "month/" + month
+      );
+
+      let data = await response.json();
+
+      setMonth(data);
       setIsLoading(false);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  fetchData(currentMonth);
 
   const { name, fruits, vegetables } = month;
 
@@ -35,7 +37,9 @@ export const Home = () => {
     type === "fruits" ? setShownArr(fruits) : setShownArr(vegetables);
   };
 
-  const handleChange = (e) => setCurrentMonth(e.target.value);
+  const handleChange = (e) => {
+    setCurrentMonth(e.target.value);
+  };
 
   return (
     <>
