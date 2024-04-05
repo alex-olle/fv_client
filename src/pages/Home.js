@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./style.css";
 
@@ -11,7 +11,7 @@ import { ChangeMonthForm } from "../components/changeMonthForm/ChangeMonthForm";
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [month, setMonth] = useState("");
-  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth() + 1);
+  const [currentMonth, setCurrentMonth] = useState(null);
   const [shownArr, setShownArr] = useState(null);
 
   const fetchData = async (month) => {
@@ -19,9 +19,7 @@ export const Home = () => {
       const response = await fetch(
         process.env.REACT_APP_API_URL + "month/" + month
       );
-
       let data = await response.json();
-
       setMonth(data);
       setIsLoading(false);
     } catch (error) {
@@ -29,7 +27,11 @@ export const Home = () => {
     }
   };
 
-  fetchData(currentMonth);
+  const currentDate = new Date().getMonth() + 1;
+
+  useEffect(() => {
+    fetchData(currentDate);
+  }, [currentDate]);
 
   const { name, fruits, vegetables } = month;
 
@@ -38,7 +40,7 @@ export const Home = () => {
   };
 
   const handleChange = (e) => {
-    setCurrentMonth(e.target.value);
+    fetchData(e.target.value);
   };
 
   return (
