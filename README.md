@@ -96,7 +96,7 @@ Benefits:
 
 ### Prerequisites
 
-Run API server [API](https://github.com/alex-olle/fv_api)
+Run [API server](https://github.com/alex-olle/fv_api)
 
 ### Installation
 
