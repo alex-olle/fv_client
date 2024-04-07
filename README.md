@@ -94,6 +94,10 @@ Benefits:
 
 ## Getting Started
 
+### Prerequisites
+
+Run API server [API](https://github.com/alex-olle/fv_api)
+
 ### Installation
 
 1. Clone the repo
@@ -115,7 +119,7 @@ Benefits:
 
 ## Roadmap
 
-- [ ] Fix vegetables bug
+- [x] Fix vegetables bug
 - [ ] Add deployed API
 - [ ] Deploy
 
