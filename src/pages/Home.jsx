@@ -6,30 +6,17 @@ import { Header } from "../components/Header/Header";
 import { Loading } from "../components/Loading/Loading";
 import { Toggle } from "../components/Toggle/Toggle";
 import { List } from "../components/List/List";
+import { fetchData } from "../services/fetchData";
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [month, setMonth] = useState("");
   const [shownArr, setShownArr] = useState(null);
 
-  const fetchData = async (month) => {
-    try {
-      const response = await fetch(
-        process.env.REACT_APP_API_URL + "month/" + month
-      );
-      let data = await response.json();
-      setMonth(data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const currentDate = new Date().getMonth() + 1;
-
   useEffect(() => {
-    fetchData(currentDate);
-  }, [currentDate]);
+    const currentDate = new Date().getMonth() + 1;
+    fetchData(currentDate, setMonth, setIsLoading);
+  }, []);
 
   const { name, fruits, vegetables } = month;
 

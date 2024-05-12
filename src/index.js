@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 
-import Routes from "./router/routesIndex";
+import Routes from "./routes/routesIndex";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
