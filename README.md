@@ -68,7 +68,7 @@
 
 ## About The Project
 
-[![Fruites i Verdures Screen Shot][product-screenshot]](#)
+![Fruites i Verdures Screenshot](public/screenshot.png)
 
 The Fruites i Verdures de temporada de Catalunya frontend interface is a user-friendly platform that delivers timely information about the availability of fruits and vegetables in the Catalonia region for each month of the year. Designed with a focus on promoting mindful, sustainable, and local eating habits, this interface empowers users to make informed decisions about their food choices while encouraging the consumption of fresh, seasonal produce.
 
