@@ -24,7 +24,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alex-olle/fv_client">
+  <a href="https://fruites-verdures.vercel.app/">
     <img src="public/logo192.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -33,9 +33,11 @@
   <p align="center">
     The frontend interface for Fruites i Verdures de temporada de Catalunya provides real-time updates on produce availability, promoting healthy eating and supporting local farmers.
     <br />
-    <a href="#"><strong>Explore the docs »</strong></a>
+    <a href="https://fv-api-wild-star-7655.fly.dev/api/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
+    <a href="https://fruites-verdures.vercel.app/">Visit website</a>
+    ·
     <a href="https://github.com/alex-olle/fv_client/issues">Report Bug</a>
     ·
     <a href="https://github.com/alex-olle/fv_client/issues">Request Feature</a>
@@ -120,8 +122,8 @@ Run [API server](https://github.com/alex-olle/fv_api)
 ## Roadmap
 
 - [x] Fix vegetables bug
-- [ ] Add deployed API
-- [ ] Deploy
+- [x] Add deployed API
+- [x] Deploy
 
 See the [open issues](https://github.com/alex-olle/fv_client/issues) for a full list of proposed features (and known issues).
 
